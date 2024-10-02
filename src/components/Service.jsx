@@ -1,13 +1,15 @@
 /* eslint-disable react/prop-types */
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export default function Service({icon,title,description}) {
 
   return (
-    <div className="bg-white border flex flex-col gap-4 justify-center text-center border-[#eeeeee] p-3">
-        <div className="bg-primary w-7 h-7 rounded-full">
-          {icon}
+    <div className="bg-white border flex flex-col w-full md:w-[350px]  gap-4 items-center text-center border-[#eeeeee] p-3">
+        <div className="bg-primary w-20 h-20 flex justify-center items-center rounded-full">
+          <FontAwesomeIcon color="#ffffff" size="lg" icon={icon}/>
         </div>
-        <h1 className="font-bold text-lg text-secondary">{title}</h1>
+        <h1 className="font-bold text-base text-secondary">{title}</h1>
         <p className="text-sm text-secondary">{description}</p>
     </div>
   )
