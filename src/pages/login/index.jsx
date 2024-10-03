@@ -1,11 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
-
+  const navigate = useNavigate(); 
   const handleLogin = async (e) => {
     e.preventDefault(); 
     console.log(username);
@@ -24,7 +25,7 @@ export default function Login() {
       localStorage.setItem("token", response.data.userdata.api_token);
       localStorage.setItem("userPdofile",response.data.userdata)
       console.log("token", response.data.userdata.api_token);
-      
+      navigate('/member')
     } catch (err) {
       console.error(err);
       setError("Login failed. Please check your credentials."); 

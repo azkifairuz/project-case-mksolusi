@@ -16,24 +16,31 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-white p-4  flex justify-center w-full">
+      <nav className="bg-white p-4  flex flex-col md:flex-row justify-center w-full">
         <div className="w-full flex justify-between md:justify-between md:w-[80%] items-center">
-            <Link to="/" className="cursor-pointer">
-              <img className="w-14 h-15" src={logo} />
+          <Link to="/" className="cursor-pointer">
+            <img className="w-14 h-15" src={logo} />
+          </Link>
+          <div className="md:flex  hidden gap-5">
+            <ul className=" md:flex justify-center gap-10">
+              {navbarData.map((data, index) => {
+                return (
+                  <Link
+                    to={data.href}
+                    key={index}
+                    className="cursor-pointer py-3 text-sm text-[#666666]"
+                  >
+                    {data.title}
+                  </Link>
+                );
+              })}
+            </ul>
+            <Link to={"/auth"}>
+              <button className="bg-primary rounded-lg py-2 px-4 text-white">
+                Login
+              </button>
             </Link>
-          <ul className="hidden md:flex justify-center gap-10">
-            {navbarData.map((data, index) => {
-              return (
-                <Link
-                  to={data.href}
-                  key={index}
-                  className="cursor-pointer py-3 text-sm text-[#666666]"
-                >
-                  {data.title}
-                </Link>
-              );
-            })}
-          </ul>
+          </div>
           <button onClick={handleNavbarOpen} className="md:hidden">
             {isNavOpen ? (
               <svg
@@ -82,6 +89,11 @@ export default function Navbar() {
               </Link>
             );
           })}
+                 <Link to={"/auth"}>
+              <button className="bg-primary rounded-lg py-2 px-4 text-white">
+                Login
+              </button>
+            </Link>
         </ul>
       </nav>
     </>
