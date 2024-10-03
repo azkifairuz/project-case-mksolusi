@@ -8,16 +8,20 @@ import Login from "./pages/login";
 import Dashboard from "./pages/dashboard";
 import Member from "./pages/member";
 import AddMember from "./pages/member/input";
+import Item from "./pages/item";
+import AddItem from "./pages/item/input";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/auth" element={<Login />} />
-        <Route path="/member" element={<Dashboard />}>
+        <Route path="/dashboard" element={<Dashboard />}>
             <Route index  element={<Member/>}/>
-            <Route path="/member/add"  element={<AddMember/>}/>
-
+            <Route path="/dashboard/member/add"  element={<AddMember/>}/>
+            <Route path="/dashboard/item"  element={<Item/>}/>
+            <Route path="/dashboard/item/add"  element={<AddItem/>}/>
+            
         </Route>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />}></Route>
