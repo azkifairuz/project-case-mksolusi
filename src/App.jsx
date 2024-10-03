@@ -11,6 +11,7 @@ import AddMember from "./pages/member/input";
 import Item from "./pages/item";
 import AddItem from "./pages/item/input";
 import Transaction from "./pages/transaction";
+import AddTransaction from "./pages/transaction/input";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
             <Route path="/dashboard/item"  element={<Item/>}/>
             <Route path="/dashboard/item/add"  element={<AddItem/>}/>
             <Route path="/dashboard/transaction"  element={<Transaction/>}/>
+            <Route path="/dashboard/transaction/add"  element={<AddTransaction/>}/>
+
             
         </Route>
         <Route path="/" element={<Layout />}>
