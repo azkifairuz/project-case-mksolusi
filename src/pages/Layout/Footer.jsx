@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
-    <div className="w-full text-white">
-      <div className="bg-[#262626] p-6">
+    <div className="w-full text-white bg-[#262626]">
+      <div className=" p-6 w-full md:w-[80%] mx-auto">
         <h1>Business Info</h1>
         <div className="flex text-[#777777] mt-4 text-sm items-start gap-4 w-[200px]">
           {<FontAwesomeIcon icon={faMapMarked} />}
@@ -20,22 +20,24 @@ export function Footer() {
           <p>info@mksolusi.id</p>
         </div>
       </div>
-      <div className="bg-[#222222] text-[#999999] items-center flex justify-between px-4">
-        <p>copyright Multi Karya Solusi @2024 - All Rights Reserved</p>
-        <ul className="flex gap-2">
-          <Link
-            to={"/home"}
-            className="cursor-pointer py-3 text-sm text-[#666666]"
-          >
-            Home
-          </Link>
-          <Link
-            to={"/home"}
-            className="cursor-pointer py-3 text-sm text-[#666666]"
-          >
-            Contact
-          </Link>
-        </ul>
+      <div className="bg-[#222222]">
+        <div className=" md:w-[80%] mx-auto text-[#999999] items-center flex justify-between px-4">
+          <p>copyright Multi Karya Solusi @2024 - All Rights Reserved</p>
+          <ul className="flex gap-2">
+            <Link
+              to={"/home"}
+              className="cursor-pointer py-3 text-sm text-[#666666]"
+            >
+              Home
+            </Link>
+            <Link
+              to={"/home"}
+              className="cursor-pointer py-3 text-sm text-[#666666]"
+            >
+              Contact
+            </Link>
+          </ul>
+        </div>
       </div>
     </div>
   );

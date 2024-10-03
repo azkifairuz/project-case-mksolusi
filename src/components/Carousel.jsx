@@ -18,14 +18,25 @@ export default function CustomerCarousel() {
   ];
 
   return (
-    <section className="w-full py-8 text-center">
+    <section className="w-full md:w-[80%] mx-auto py-8 text-center">
       <Swiper
         spaceBetween={1}
-        slidesPerView={6}
+        slidesPerView={1}
         loop={true}
         pagination={{clickable:true,}}
         autoplay={{ delay: 3000 }}
         modules={[Pagination]} 
+        breakpoints={{
+          640: {
+            slidesPerView: 1, 
+          },
+          768: {
+            slidesPerView: 3, 
+          },
+          1024: {
+            slidesPerView: 6,
+          },
+        }}
       >
         {customers.map((customer, index) => (
           <SwiperSlide key={index}>

@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="bg-white p-4  flex justify-center w-full">
-        <div className="w-full flex justify-between md:justify-between lg:w-1/2 items-center">
+        <div className="w-full flex justify-between md:justify-between md:w-[80%] items-center">
             <Link to="/" className="cursor-pointer">
               <img className="w-14 h-15" src={logo} />
             </Link>

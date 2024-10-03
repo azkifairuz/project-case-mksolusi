@@ -44,7 +44,7 @@ export default function Home() {
         className="bg-center h-[300px] lg:h-screen bg-no-repeat bg-cover flex justify-center"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="text-start lg:w-1/2 mt-36 ">
+        <div className="text-start w-[80%] mx-auto  mt-36 ">
           <h1 className="text-white hidden md:block text-7xl text-nowrap  mb-4">
             PT Multi Karya Solusi
           </h1>
