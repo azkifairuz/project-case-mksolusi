@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
-    <div className="w-full text-white bg-[#262626]">
+    <div className="w-full text-white bg-[#262626] mt-6">
       <div className=" p-6 w-full md:w-[80%] mx-auto">
         <h1>Business Info</h1>
         <div className="flex text-[#777777] mt-4 text-sm items-start gap-4 w-[200px]">

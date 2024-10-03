@@ -4,7 +4,7 @@ import { Footer } from "./Footer";
 
 export default function Layout() {
     return (
-       <div className="w-full bg-black"> 
+       <div className="w-full"> 
          <Navbar/>
          <Outlet/>
          <Footer/>

@@ -98,7 +98,6 @@ export default function About() {
             satisfaction is an absolute thing for us in running the business
             wheel.
           </p>
-          <button className="bg-primary py-2 px-4 mt-10">Read More</button>
         </div>
       </section>
     </div>

@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Service from "@/components/Service";
 import CustomerCarousel from "../../components/Carousel";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const serviceData = [
@@ -37,7 +38,6 @@ export default function Home() {
       icon: faSitemap,
     },
   ];
-  console.log(serviceData);
   return (
     <div className="bg-white ">
       <section
@@ -67,15 +67,13 @@ export default function Home() {
         style={{ backgroundImage: `url(${profileSection})` }}
       >
           <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
-
           <div className="relative z-20 w-1/2 text-white flex justify-center text-center items-center flex-col">
             <h1 className="text-white text-[30px]">Profile</h1>
             <span className="text-white w-[150px] mt-5 h-1 border-white bg-white border block"></span>
             <p className="mt-5">PT Multi Karya Solusi is an Information Technology solutions company that includes Information Technology Consultation and Planning, Application System Development, Integration of communication devices and networks as well as maintenance and repair of system devices with coverage in various fields in the public and private sectors.</p>
-            {/* <p className="mt-5">PT Multi Karya Solusi is an Information Technology solutions company that includes Information Technology Consultation and Planning, Application System Development, Integration of communication devices and networks as well as maintenance and repair of system devices with coverage in various fields in the public and private sectors.</p> */}
-            {/* <p className="mt-5">With the support of experienced experts PT MKS provides the best solutions, technical support and quality assurance for customer satisfaction by applying the philosophy that our success is the result of partnerships from customers and principals.</p>
-            <p className="mt-5">We highly value commitment and professionalism and uphold the code of ethics and customer loyalty, therefore customer trust and satisfaction is an absolute thing for us in running the business wheel.</p> */}
+              <Link to={"about"}>
             <button className="bg-primary py-2 px-4 mt-10">Read More</button>
+            </Link>
           </div>
       </section>
       <section className="flex py-[100px] justify-center flex-col items-center">
