@@ -1,7 +1,7 @@
 import {
 
+  faBarChart,
   faCircle,
-  faUser,
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,9 +9,9 @@ import { Link } from "react-router-dom";
 
 export default function SidebarDashboard() {
   const navbarData = [
+    { href: "/dashboard/transaction", title: "Transaction", icon: faBarChart },
     { href: "/dashboard", title: "Member", icon: faUsers},
     { href: "/dashboard/item", title: "Item", icon: faCircle},
-    { href: "/karyawan", title: "Karyawan", icon: faUser },
   ];
   return (
     <div>
