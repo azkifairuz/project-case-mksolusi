@@ -4,11 +4,15 @@ import './App.css'
 import Home from './pages/home'
 import About from './pages/about'
 import Contact from './pages/contact'
+import Login from './pages/login'
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+      <Route path='/auth' element={<Login/>} >
+
+      </Route>
         <Route path='/' element={<Layout/>} >
           <Route index element={<Home/>}></Route>
           <Route path='/about' element={<About/>}></Route>
