@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -6,7 +7,6 @@ export default function Member() {
   const token = localStorage.getItem("token");
   const [error, setError] = useState(null);
   const [memberData, setMemberData] = useState([]);
-  console.log(token);
   const fetchMember = async () => {
     try {
       const response = await axios.post(
@@ -31,6 +31,11 @@ export default function Member() {
   }, []);
   return (
     <section className="container mx-auto p-6 font-mono">
+      <Link to={"/member/add"} className="mb-6 ml-auto">
+        <button className="py-2 px-4 rounded-lg bg-primary mb-6  text-white">
+          Tambah Data
+        </button>
+      </Link>
       <div className="w-full mb-8 overflow-hidden rounded-lg shadow-lg">
         <div className="w-full overflow-x-auto">
           <table className="w-full">
@@ -39,8 +44,6 @@ export default function Member() {
                 <th className="px-4 py-3">fullname</th>
                 <th className="px-4 py-3">username</th>
                 <th className="px-4 py-3">role</th>
-                <th className="px-4 py-3">action</th>
-
               </tr>
             </thead>
             <tbody className="bg-white">
@@ -50,7 +53,9 @@ export default function Member() {
                     <td className="px-4 py-3 border">
                       <div className="flex items-center text-sm">
                         <div>
-                          <p className="font-semibold text-black">{data.detail.fullname}</p>
+                          <p className="font-semibold text-black">
+                            {data.detail.fullname}
+                          </p>
                         </div>
                       </div>
                     </td>
@@ -62,11 +67,6 @@ export default function Member() {
                         {" "}
                         {data.detail_type}{" "}
                       </span>
-                    </td>
-                    <td className="px-4 py-3 text-sm border">
-                      <Link>
-                      <button className="bg-primary py-2 px-4 text-white rounded-lg">Detail</button>
-                      </Link>
                     </td>
                   </tr>
                 );
